@@ -9,6 +9,12 @@ Instalar las dependencias del proyecto
 npm i
 ```
 
+Ejecutar la DB y Redis
+
+```bash
+docker compose up
+```
+
 ## Ejecutar los siguientes comandos
 
 ```bash
@@ -27,7 +33,7 @@ npm run start
 
 ## Contributing
 
-Para hacer las pruebas respectivas en su navegador favorito entrar a:
+Para hacer las pruebas respectivas en su navegador favorita entrar a:
 
 ## localhost:3000/api-docs/
 
