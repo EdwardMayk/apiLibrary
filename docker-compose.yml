@@ -23,26 +23,26 @@ services:
     networks:
       - app_network
 
-  app:
-    build:
-      context: .
-    container_name: express_app
-    environment:
-      NODE_ENV: development
-      DB_HOST: 0.0.0.0
-      DB_PORT: 5432
-      DB_USER: root
-      DB_PASSWORD: password
-      DB_NAME: libraryDB
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-      - redis
-    networks:
-      - app_network
+  # app:
+  #   build:
+  #     context: .
+  #   container_name: express_app
+  #   environment:
+  #     NODE_ENV: development
+  #     DB_HOST: 0.0.0.0
+  #     DB_PORT: 5432
+  #     DB_USER: root
+  #     DB_PASSWORD: password
+  #     DB_NAME: libraryDB
+  #     REDIS_HOST: redis
+  #     REDIS_PORT: 6379
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - db
+  #     - redis
+  #   networks:
+  #     - app_network
 
 volumes:
   pgdata:
