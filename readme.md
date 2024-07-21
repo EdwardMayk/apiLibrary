@@ -27,7 +27,7 @@ npm run start
 
 ## Contributing
 
-Para hacer las pruebas respectivas en su navegador favorita entrar a:
+Para hacer las pruebas respectivas en su navegador favorito entrar a:
 
 ## localhost:3000/api-docs/
 
