@@ -214,7 +214,6 @@ export class UserController {
      */
     async updateUser(req: Request, res: Response) {
         try {
-            console.log('req.body', req.body);
             const id = parseInt(req.params.id);
             const dto: UpdateUserDto = req.body;
             const updatedUser = await userService.updateUser(id, dto);

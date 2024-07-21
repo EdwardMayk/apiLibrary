@@ -110,7 +110,6 @@ export class BookController {
   async createBook(req: Request, res: Response): Promise<void> {
     try {
       const createBookDto: CreateBookDto = req.body;
-      console.log('controllerDto', createBookDto);
       const book = await bookService.createBook(createBookDto);
       res.status(201).json({
         message: 'Book created successfully',
@@ -312,7 +311,6 @@ export class BookController {
    */
   async exportBooks(req: Request, res: Response): Promise<void> {
     try {
-      console.log('Exporting books to XLSX...');
       const filePath = await bookService.exportBooksToXlsx();
 
       res.download(filePath, 'books.xlsx', (err) => {

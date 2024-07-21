@@ -71,7 +71,6 @@ export class AuthorController {
      */
     async getAllAuthors(req: Request, res: Response) {
         try {
-            console.log('getAllAuthors');
             const authors = await authorService.getAllAuthors();
             res.status(200).json({
                 message: 'Authors fetched successfully',

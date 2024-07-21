@@ -32,7 +32,6 @@ export class AuthService {
                 ...dto,
             });
 
-            console.log('user', user);
 
             await Author.create({
                 name: dto.name,

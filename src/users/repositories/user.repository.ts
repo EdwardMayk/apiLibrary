@@ -21,7 +21,6 @@ export class UserRepository implements UserInterface {
     }
 
     async createUser(dto: CreateUserDto): Promise<User> {
-        console.log('dto', dto);
         const passwordEncrypted = await encrypt(dto.password);
 
         const newUser = await User.create({
@@ -38,7 +37,6 @@ export class UserRepository implements UserInterface {
     }
 
     async updateUser(id: number, dto: UpdateUserDto): Promise<User> {
-        console.log('dto', dto);
         const user = await User.findOne({ where: { id } });
         if (!user) {
             throw new Error('User not found');
@@ -54,7 +52,6 @@ export class UserRepository implements UserInterface {
             role: dto.role,
         });
 
-        console.log('updatedUser', updatedUser);
 
         //remove password from response
         delete updatedUser.password;
